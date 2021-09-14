@@ -5,8 +5,10 @@ export const tariffs = [
     name: "Эконом",
     pricePerKm: 4,
     freeWeight: 5,
-    pricePerWeight: 400,
+    pricePerWeight: 4000,
     maxWeight: 20,
+    discountAge: 0,
+    discount: 0,
   },
   {
     transport: "plane",

@@ -37,10 +37,11 @@ export default class Tariff {
         freeWeight !== 0
           ? this.weight <= freeWeight
             ? 0
-            : this.weight * pricePerWeight
+            : transport === "train" 
+              ? this.weight * pricePerWeight
+              : pricePerWeight
           : 0;
       const finalPrice =
-        discountAge &&
         (this.age < discountAge
           ? distancePrice * (1 - discount)
           : distancePrice) + laggagePrice;
